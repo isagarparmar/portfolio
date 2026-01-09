@@ -49,10 +49,11 @@ header {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
   z-index: 1000;
+  will-change: backdrop-filter;
 }
 
 .nav {
-  height: 70px;
+  height: 96px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,11 +121,6 @@ header {
   margin-bottom: 2rem;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
 
 .btn {
   background: var(--accent);
@@ -149,6 +145,17 @@ header {
   background: var(--accent);
   color: #020617;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+}
+
 
 /* ===== SECTIONS ===== */
 .section-title {
@@ -227,5 +234,11 @@ footer {
 
   .nav-cta {
     display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 4.5rem;
   }
 }
